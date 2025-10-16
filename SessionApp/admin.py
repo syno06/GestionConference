@@ -25,17 +25,3 @@ class SessionAdmin(admin.ModelAdmin):
         return "N/A"
     duration.short_description = "Durée"
 
-# @admin.register(submission)
-# class SubmissionAdmin(admin.ModelAdmin):
-#     list_display = ('submission_id', 'title', 'author', 'conference', 'status', 'payed', 'submission_date', 'is_valid_registration')
-#     list_filter = ('status', 'payed', 'conference', 'submission_date')
-#     search_fields = ('submission_id', 'title', 'author__first_name', 'author__last_name', 'conference__name')
-#     readonly_fields = ('submission_id', 'submission_date')
-#     date_hierarchy = 'submission_date'
-#     autocomplete_fields = ['author', 'conference']
-    
-#     def is_valid_registration(self, obj):
-#         """Indique si l'inscription est valide"""
-#         return obj.is_registration_valid
-#     is_valid_registration.short_description = "Inscription valide"
-#     is_valid_registration.boolean = True  # Affiche une icône vrai/faux
